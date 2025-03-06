@@ -3,18 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Style.css" />
-    <title>Test</title>
+    <title>Tennis Tournament</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>tENNIS PROJECT</h1>
-    <div class="Navigation">
-      <ul>
-        <li><a href="#">something</a></li>
-        <li><a href="#">something</a></li>
-        <li><a href="#">something</a></li>
-      </ul>
-    </div>
+    <header>
+      <h1>Tennis Tournament</h1>
+    </header>
+    <main>
+      <section id="setup">
+        <h2>Enter number of players</h2>
+        <input
+          type="number"
+          id="playerCount"
+          min="2"
+          placeholder="Number of Players"
+        />
+        <button onclick="nextStep()">Next</button>
+      </section>
+
+      <section id="playerNames" style="display: none">
+        <h2>Enter Player Names</h2>
+        <div id="nameInputs"></div>
+        <button onclick="generateBracket()">Generate Bracket</button>
+      </section>
+
+      <section id="bracket" style="display: none">
+        <h2>Tournament Bracket</h2>
+        <div id="bracketDisplay"></div>
+      </section>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
