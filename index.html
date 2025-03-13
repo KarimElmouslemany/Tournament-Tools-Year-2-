@@ -8,29 +8,41 @@
   </head>
   <body>
     <header>
-      <h1>Tennis Tournament</h1>
+      <h1>🎾 Tennis Tournament Creator</h1>
     </header>
+
     <main>
+      <!-- Step 1: Enter Number of Players -->
       <section id="setup">
-        <h2>Enter number of players</h2>
+        <h2>Enter Number of Players</h2>
         <input
           type="number"
           id="playerCount"
           min="2"
-          placeholder="Number of Players"
+          max="32"
+          placeholder="Min 2 Players"
         />
         <button onclick="nextStep()">Next</button>
       </section>
 
-      <section id="playerNames" style="display: none">
+      <!-- Step 2: Enter Player Names -->
+      <section id="playerNames" class="hidden">
         <h2>Enter Player Names</h2>
         <div id="nameInputs"></div>
-        <button onclick="generateBracket()">Generate Bracket</button>
+        <button onclick="startTournament()">Start Tournament</button>
       </section>
 
-      <section id="bracket" style="display: none">
-        <h2>Tournament Bracket</h2>
+      <!-- Step 3: Tournament Bracket -->
+      <section id="bracket" class="hidden">
+        <h2>Current Round</h2>
         <div id="bracketDisplay"></div>
+        <button onclick="progressTournament()">Next Round</button>
+      </section>
+
+      <!-- Step 4: Tournament Winner -->
+      <section id="winnerSection" class="hidden">
+        <h2>🏆 Champion: <span id="winnerName"></span> 🏆</h2>
+        <button onclick="restartTournament()">Restart Tournament</button>
       </section>
     </main>
 

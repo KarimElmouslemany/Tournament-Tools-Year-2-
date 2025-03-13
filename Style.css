@@ -1,17 +1,22 @@
+/* General Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background: linear-gradient(to bottom, #87ceeb, #ffffff);
 }
 
+/* Header */
 header {
   background: #d32f2f;
   color: white;
   padding: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
+/* Main Sections */
 main {
   margin: 20px;
 }
@@ -20,25 +25,102 @@ section {
   background: white;
   padding: 20px;
   margin: 20px auto;
-  width: 50%;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: scale(1.02);
+}
+
+/* Inputs & Buttons */
+input {
+  padding: 12px;
+  margin: 10px;
+  width: 85%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 20px;
   background: #007bff;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
 button:hover {
   background: #0056b3;
 }
 
-input {
-  padding: 8px;
-  margin: 10px;
+/* Hide Sections */
+.hidden {
+  display: none;
+}
+
+/* Bracket Styling */
+#bracketDisplay {
+  text-align: left;
+  padding: 10px;
+}
+
+/* Match Display */
+.match {
+  background: #f0f0f0;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid #007bff;
+  transition: 0.3s;
+}
+
+.match:hover {
+  background: #cce5ff;
+  border-color: #0056b3;
+}
+
+/* Winner Selection Styling */
+.match label {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Improved Winner Selection Buttons */
+.match input[type="radio"] {
+  transform: scale(1.7); /* Makes the selection button bigger */
+  margin-right: 15px;
+  accent-color: #007bff; /* Highlights selected button in blue */
+}
+
+/* Selected Winner Styling */
+.match input[type="radio"]:checked + label {
+  background: #007bff;
+  color: white;
+  border-color: #0056b3;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Winner Section */
+#winnerSection h2 {
+  color: #d32f2f;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
