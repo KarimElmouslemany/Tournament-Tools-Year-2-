@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Match Details</title>
+    <title>Tennis Tournament</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <body>
 
     <header>
-        <h1>Tennis Tournament</h1>
-      </header>
+        <h1>🎾 Tennis Tournament</h1>
+    </header>
 
     <section id="setup">
-
         <h3 id="matchInfo"></h3>
-        <input type="number" id="score1" placeholder="Player 1 Score">
-        <input type="number" id="score2" placeholder="Player 2 Score">
+        
+        <div class="winner-selection">
+            <label>
+                <input type="radio" name="winner" id="winner1">
+                <span id="player1Label"></span>
+            </label>
+            <label>
+                <input type="radio" name="winner" id="winner2">
+                <span id="player2Label"></span>
+            </label>
+        </div>
 
-        <button onclick="submitScore()">Submit Score</button>
-        <script src="js/match.js"></script>
-
+        <button onclick="submitWinner()">Submit Winner</button>
     </section>
 
+    <script src="js/match.js"></script>
 </body>
-
 </html>
+
