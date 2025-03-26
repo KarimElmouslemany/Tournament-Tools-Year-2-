@@ -28,12 +28,23 @@ header {
     background: white;
     padding: 20px;
     margin: 20px auto;
-    width: 90%;
-    max-width: 500px;
+    min-width: 400px;
+    max-width: 90%;
+    width: fit-content; /* Adjust width to content */
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
-  }
+    overflow-x: auto;
+}
+
+.bracket {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
 
   section:hover {
     transform: scale(1.02);
@@ -64,12 +75,9 @@ input {
     background: #0056b3;
   }
 
-/* Bracket styling */
-.bracket {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px;
+  #startMatchButton {
+    display: block;
+    margin: 20px auto; /* Center horizontally */
 }
 
 .round {
@@ -132,3 +140,26 @@ input {
     padding: 8px;
     margin: 10px;
   }
+
+  .winner-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.winner-selection label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.winner-selection input {
+    transform: scale(1.3);
+}
+
+#matchInfo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
