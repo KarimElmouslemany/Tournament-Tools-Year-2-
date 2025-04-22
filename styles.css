@@ -1,10 +1,11 @@
 /* General styles */
 body {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #87ceeb, #ffffff);
+  min-height: 100vh; /* Ensures gradient covers full viewport height */
 }
 
 h1 {
@@ -13,7 +14,7 @@ h1 {
 }
 
 header {
-    background: #d32f2f;
+  background: #d32f2f;
   color: white;
   padding: 15px;
   font-size: 1.8rem;
@@ -100,6 +101,30 @@ input {
 
 .match p {
     margin: 5px 0;
+}
+
+.match h4 {
+  color: #d32f2f; /* Red for emphasis */
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+.winner {
+    color: #2e8b57;
+    font-weight: bold;
+}
+
+.match-winner {
+    color: #2e8b57;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.round {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px;
 }
 
 /* Match page score entry */
